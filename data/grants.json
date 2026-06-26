@@ -1,0 +1,383 @@
+{
+  "metadata": {
+    "dashboardName": "Emmanuel Grant Agent",
+    "owner": "Emmanuel",
+    "mission": "Find, score, and move aligned grant opportunities from discovery to submission.",
+    "lastUpdated": "2026-06-25",
+    "lastRunAt": "2026-06-26T03:34:42.869Z",
+    "nextUpdate": "2026-06-26",
+    "sourceMode": "local",
+    "sourceName": "Starter opportunity portfolio",
+    "sourceStatus": "ready"
+  },
+  "settings": {
+    "timezone": "America/Vancouver",
+    "dailyRunHour": 6,
+    "fitThreshold": 82,
+    "touchCadenceDays": 7,
+    "dueSoonDays": 14
+  },
+  "opportunities": [
+    {
+      "id": "doe-community-clean-energy-2026",
+      "title": "Community Clean Energy Capacity Grant",
+      "agency": "Department of Energy",
+      "program": "Office of State and Community Energy Programs",
+      "amount": 250000,
+      "deadline": "2026-07-15",
+      "stage": "Research",
+      "priority": "High",
+      "fitScore": 91,
+      "lastTouched": "2026-06-22",
+      "nextAction": "Confirm eligibility language with the fiscal sponsor.",
+      "owner": "Emmanuel",
+      "url": "https://www.grants.gov/",
+      "tags": [
+        "energy",
+        "community",
+        "capacity"
+      ],
+      "summary": "Supports local clean-energy planning, partner coordination, and implementation readiness.",
+      "status": "open",
+      "daysUntilDeadline": 20,
+      "daysSinceTouch": 3,
+      "touchStatus": "current"
+    },
+    {
+      "id": "hhs-youth-wellness-2026",
+      "title": "Youth Wellness Outreach Initiative",
+      "agency": "Health and Human Services",
+      "program": "Community Prevention Programs",
+      "amount": 180000,
+      "deadline": "2026-07-29",
+      "stage": "Draft",
+      "priority": "High",
+      "fitScore": 87,
+      "lastTouched": "2026-06-24",
+      "nextAction": "Draft the outcomes section and request two partner quotes.",
+      "owner": "Emmanuel",
+      "url": "https://www.grants.gov/",
+      "tags": [
+        "youth",
+        "health",
+        "outreach"
+      ],
+      "summary": "Funds community outreach and prevention programming for youth wellness and family support.",
+      "status": "open",
+      "daysUntilDeadline": 34,
+      "daysSinceTouch": 1,
+      "touchStatus": "current"
+    },
+    {
+      "id": "nea-arts-access-2026",
+      "title": "Neighborhood Arts Access Fund",
+      "agency": "National Endowment for the Arts",
+      "program": "Local Arts Engagement",
+      "amount": 75000,
+      "deadline": "2026-08-08",
+      "stage": "Review",
+      "priority": "Medium",
+      "fitScore": 79,
+      "lastTouched": "2026-06-18",
+      "nextAction": "Tighten the budget narrative and attach venue commitment letters.",
+      "owner": "Emmanuel",
+      "url": "https://www.grants.gov/",
+      "tags": [
+        "arts",
+        "access",
+        "events"
+      ],
+      "summary": "Backs accessible arts programming, neighborhood events, and audience-development work.",
+      "status": "open",
+      "daysUntilDeadline": 44,
+      "daysSinceTouch": 7,
+      "touchStatus": "current"
+    },
+    {
+      "id": "ed-workforce-pathways-2026",
+      "title": "Workforce Pathways Planning Grant",
+      "agency": "Department of Education",
+      "program": "Career Readiness Partnerships",
+      "amount": 320000,
+      "deadline": "2026-08-21",
+      "stage": "Research",
+      "priority": "High",
+      "fitScore": 84,
+      "lastTouched": "2026-06-16",
+      "nextAction": "Map employer partners to the required service categories.",
+      "owner": "Emmanuel",
+      "url": "https://www.grants.gov/",
+      "tags": [
+        "workforce",
+        "education",
+        "partnerships"
+      ],
+      "summary": "Planning dollars for training pathways, partner coordination, and employer-aligned credentials.",
+      "status": "open",
+      "daysUntilDeadline": 57,
+      "daysSinceTouch": 9,
+      "touchStatus": "needs-touch"
+    },
+    {
+      "id": "usda-food-access-2026",
+      "title": "Food Access Innovation Grant",
+      "agency": "Department of Agriculture",
+      "program": "Community Food Projects",
+      "amount": 140000,
+      "deadline": "2026-09-03",
+      "stage": "Discover",
+      "priority": "Medium",
+      "fitScore": 76,
+      "lastTouched": "2026-06-20",
+      "nextAction": "Validate match requirements and distribution partner capacity.",
+      "owner": "Emmanuel",
+      "url": "https://www.grants.gov/",
+      "tags": [
+        "food",
+        "access",
+        "innovation"
+      ],
+      "summary": "Supports community-led food access pilots, outreach, and local supply partnerships.",
+      "status": "open",
+      "daysUntilDeadline": 70,
+      "daysSinceTouch": 5,
+      "touchStatus": "current"
+    },
+    {
+      "id": "epa-resilience-mini-grant-2026",
+      "title": "Neighborhood Resilience Mini-Grant",
+      "agency": "Environmental Protection Agency",
+      "program": "Community Resilience",
+      "amount": 50000,
+      "deadline": "2026-07-07",
+      "stage": "Draft",
+      "priority": "High",
+      "fitScore": 88,
+      "lastTouched": "2026-06-25",
+      "nextAction": "Finalize the timeline and confirm insurance documentation.",
+      "owner": "Emmanuel",
+      "url": "https://www.grants.gov/",
+      "tags": [
+        "resilience",
+        "climate",
+        "neighborhoods"
+      ],
+      "summary": "Small implementation grants for preparedness, climate resilience, and neighborhood response capacity.",
+      "status": "due-soon",
+      "daysUntilDeadline": 12,
+      "daysSinceTouch": 0,
+      "touchStatus": "current"
+    }
+  ],
+  "applications": [
+    {
+      "id": "app-hhs-youth-wellness",
+      "opportunityId": "hhs-youth-wellness-2026",
+      "stage": "Draft",
+      "requestedAmount": 180000,
+      "confidence": 72,
+      "submittedAt": null
+    },
+    {
+      "id": "app-epa-resilience",
+      "opportunityId": "epa-resilience-mini-grant-2026",
+      "stage": "Draft",
+      "requestedAmount": 50000,
+      "confidence": 78,
+      "submittedAt": null
+    },
+    {
+      "id": "app-nea-arts-access",
+      "opportunityId": "nea-arts-access-2026",
+      "stage": "Review",
+      "requestedAmount": 75000,
+      "confidence": 66,
+      "submittedAt": null
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task-fiscal-sponsor",
+      "title": "Fiscal sponsor eligibility check",
+      "opportunityId": "doe-community-clean-energy-2026",
+      "owner": "Emmanuel",
+      "dueDate": "2026-06-28",
+      "status": "Due soon",
+      "priority": "High",
+      "daysUntilDue": 3
+    },
+    {
+      "id": "task-partner-quotes",
+      "title": "Collect youth wellness partner quotes",
+      "opportunityId": "hhs-youth-wellness-2026",
+      "owner": "Emmanuel",
+      "dueDate": "2026-07-02",
+      "status": "Open",
+      "priority": "High",
+      "daysUntilDue": 7
+    },
+    {
+      "id": "task-resilience-timeline",
+      "title": "Finalize resilience grant timeline",
+      "opportunityId": "epa-resilience-mini-grant-2026",
+      "owner": "Emmanuel",
+      "dueDate": "2026-06-27",
+      "status": "Due soon",
+      "priority": "High",
+      "daysUntilDue": 2
+    },
+    {
+      "id": "task-budget-narrative",
+      "title": "Revise arts access budget narrative",
+      "opportunityId": "nea-arts-access-2026",
+      "owner": "Emmanuel",
+      "dueDate": "2026-07-05",
+      "status": "Open",
+      "priority": "Medium",
+      "daysUntilDue": 10
+    },
+    {
+      "id": "task-employer-map",
+      "title": "Map employer partner commitments",
+      "opportunityId": "ed-workforce-pathways-2026",
+      "owner": "Emmanuel",
+      "dueDate": "2026-07-10",
+      "status": "Open",
+      "priority": "Medium",
+      "daysUntilDue": 15
+    }
+  ],
+  "metrics": {
+    "openOpportunities": 6,
+    "dueSoon": 1,
+    "highFit": 4,
+    "activeApplications": 3,
+    "requestedAmount": 1015000,
+    "averageFitScore": 84,
+    "overdueTasks": 0,
+    "dueTodayTasks": 0,
+    "nextDeadline": {
+      "id": "epa-resilience-mini-grant-2026",
+      "title": "Neighborhood Resilience Mini-Grant",
+      "date": "2026-07-07",
+      "daysUntilDeadline": 12
+    }
+  },
+  "pipeline": [
+    {
+      "stage": "Discover",
+      "count": 1,
+      "amount": 140000
+    },
+    {
+      "stage": "Research",
+      "count": 2,
+      "amount": 570000
+    },
+    {
+      "stage": "Draft",
+      "count": 2,
+      "amount": 230000
+    },
+    {
+      "stage": "Review",
+      "count": 1,
+      "amount": 75000
+    },
+    {
+      "stage": "Submitted",
+      "count": 0,
+      "amount": 0
+    },
+    {
+      "stage": "Awarded",
+      "count": 0,
+      "amount": 0
+    },
+    {
+      "stage": "Declined",
+      "count": 0,
+      "amount": 0
+    }
+  ],
+  "dailyDigest": [
+    {
+      "type": "deadline",
+      "severity": "warning",
+      "title": "Neighborhood Resilience Mini-Grant closes in 12 days",
+      "detail": "Finalize the timeline and confirm insurance documentation.",
+      "opportunityId": "epa-resilience-mini-grant-2026"
+    },
+    {
+      "type": "task",
+      "severity": "warning",
+      "title": "Finalize resilience grant timeline",
+      "detail": "Due in 2 days",
+      "opportunityId": "epa-resilience-mini-grant-2026"
+    },
+    {
+      "type": "cadence",
+      "severity": "attention",
+      "title": "Workforce Pathways Planning Grant needs a follow-up touch",
+      "detail": "Last touched 9 days ago",
+      "opportunityId": "ed-workforce-pathways-2026"
+    },
+    {
+      "type": "fit",
+      "severity": "positive",
+      "title": "4 high-fit opportunities are active",
+      "detail": "Average fit score is 84",
+      "opportunityId": null
+    }
+  ],
+  "deadlineRadar": [
+    {
+      "id": "epa-resilience-mini-grant-2026",
+      "title": "Neighborhood Resilience Mini-Grant",
+      "deadline": "2026-07-07",
+      "daysUntilDeadline": 12,
+      "priority": "High",
+      "fitScore": 88
+    },
+    {
+      "id": "doe-community-clean-energy-2026",
+      "title": "Community Clean Energy Capacity Grant",
+      "deadline": "2026-07-15",
+      "daysUntilDeadline": 20,
+      "priority": "High",
+      "fitScore": 91
+    },
+    {
+      "id": "hhs-youth-wellness-2026",
+      "title": "Youth Wellness Outreach Initiative",
+      "deadline": "2026-07-29",
+      "daysUntilDeadline": 34,
+      "priority": "High",
+      "fitScore": 87
+    },
+    {
+      "id": "nea-arts-access-2026",
+      "title": "Neighborhood Arts Access Fund",
+      "deadline": "2026-08-08",
+      "daysUntilDeadline": 44,
+      "priority": "Medium",
+      "fitScore": 79
+    },
+    {
+      "id": "ed-workforce-pathways-2026",
+      "title": "Workforce Pathways Planning Grant",
+      "deadline": "2026-08-21",
+      "daysUntilDeadline": 57,
+      "priority": "High",
+      "fitScore": 84
+    },
+    {
+      "id": "usda-food-access-2026",
+      "title": "Food Access Innovation Grant",
+      "deadline": "2026-09-03",
+      "daysUntilDeadline": 70,
+      "priority": "Medium",
+      "fitScore": 76
+    }
+  ]
+}
