@@ -1,0 +1,16 @@
+{
+  "name": "emmanuel-grant-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Daily-updating dashboard for the Emmanuel Grant Agent.",
+  "scripts": {
+    "start": "node server.mjs",
+    "update": "node scripts/update-data.mjs",
+    "update:dry-run": "node scripts/update-data.mjs --dry-run",
+    "check": "node scripts/check-dashboard.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
