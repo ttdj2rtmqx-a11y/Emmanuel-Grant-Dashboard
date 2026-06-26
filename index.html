@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Emmanuel Grant Agent</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Dashboard navigation">
+        <div class="brand-block">
+          <div class="brand-mark" aria-hidden="true">EG</div>
+          <div>
+            <p class="eyebrow">Daily Grant Desk</p>
+            <h1>Emmanuel Grant Agent</h1>
+          </div>
+        </div>
+        <nav class="nav-list" aria-label="Primary">
+          <a class="active" href="#overview">Overview</a>
+          <a href="#opportunities">Opportunities</a>
+          <a href="#tasks">Tasks</a>
+          <a href="#pipeline">Pipeline</a>
+        </nav>
+        <div class="update-panel">
+          <p class="label">Next update</p>
+          <strong id="nextUpdate">Loading</strong>
+          <span id="sourceStatus">Source pending</span>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar" id="overview">
+          <div>
+            <p class="eyebrow">Grant command center</p>
+            <h2>Daily funding dashboard</h2>
+          </div>
+          <div class="topbar-actions">
+            <span class="refresh-stamp" id="lastUpdated">Loading data</span>
+            <button class="icon-button" id="refreshButton" type="button" aria-label="Refresh dashboard">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20 11a8 8 0 0 0-14.5-4.7L4 8" />
+                <path d="M4 4v4h4" />
+                <path d="M4 13a8 8 0 0 0 14.5 4.7L20 16" />
+                <path d="M20 20v-4h-4" />
+              </svg>
+              Refresh
+            </button>
+          </div>
+        </header>
+
+        <section class="kpi-grid" id="kpiGrid" aria-label="Grant metrics"></section>
+
+        <section class="brief-band" aria-labelledby="briefTitle">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Today</p>
+              <h3 id="briefTitle">Daily brief</h3>
+            </div>
+            <span id="briefCount">0 items</span>
+          </div>
+          <div class="brief-list" id="briefList"></div>
+        </section>
+
+        <section class="work-grid">
+          <section class="panel panel-wide" id="opportunities" aria-labelledby="opportunitiesTitle">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Pipeline</p>
+                <h3 id="opportunitiesTitle">Grant opportunities</h3>
+              </div>
+              <div class="filter-row">
+                <label class="search-box">
+                  <span class="sr-only">Search grants</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m21 21-4.3-4.3" />
+                    <circle cx="11" cy="11" r="7" />
+                  </svg>
+                  <input id="searchInput" type="search" placeholder="Search grants" autocomplete="off" />
+                </label>
+                <select id="statusFilter" aria-label="Filter by status">
+                  <option value="all">All status</option>
+                  <option value="due-soon">Due soon</option>
+                  <option value="open">Open</option>
+                  <option value="closed">Closed</option>
+                </select>
+                <select id="priorityFilter" aria-label="Filter by priority">
+                  <option value="all">All priority</option>
+                  <option value="High">High</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Low">Low</option>
+                </select>
+              </div>
+            </div>
+            <div class="opportunity-table" id="opportunityTable"></div>
+          </section>
+
+          <section class="panel" id="pipeline" aria-labelledby="pipelineTitle">
+            <div class="section-heading compact">
+              <div>
+                <p class="eyebrow">Stages</p>
+                <h3 id="pipelineTitle">Pipeline value</h3>
+              </div>
+            </div>
+            <canvas id="pipelineChart" width="520" height="280"></canvas>
+          </section>
+
+          <section class="panel" aria-labelledby="deadlineTitle">
+            <div class="section-heading compact">
+              <div>
+                <p class="eyebrow">Radar</p>
+                <h3 id="deadlineTitle">Deadline pressure</h3>
+              </div>
+            </div>
+            <div class="deadline-radar" id="deadlineRadar"></div>
+          </section>
+
+          <section class="panel" id="tasks" aria-labelledby="tasksTitle">
+            <div class="section-heading compact">
+              <div>
+                <p class="eyebrow">Queue</p>
+                <h3 id="tasksTitle">Next actions</h3>
+              </div>
+            </div>
+            <div class="task-list" id="taskList"></div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <aside class="detail-drawer" id="detailDrawer" aria-live="polite" aria-label="Grant details">
+      <button class="drawer-close" id="drawerClose" type="button" aria-label="Close grant details">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M18 6 6 18" />
+          <path d="m6 6 12 12" />
+        </svg>
+      </button>
+      <div id="drawerContent"></div>
+    </aside>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
