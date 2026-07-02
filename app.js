@@ -1,5 +1,12 @@
+import {
+  applicationFileName,
+  buildApplicationPackage,
+  generateApplicationMarkdown
+} from "./application-generator.js";
+
 const state = {
   dashboard: null,
+  profile: null,
   opportunities: [],
   filters: {
     search: "",
@@ -83,22 +90,34 @@ function wireEvents() {
   });
 
   elements.drawerClose.addEventListener("click", closeDrawer);
+  elements.drawerContent.addEventListener("click", handleDrawerAction);
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") closeDrawer();
   });
 }
 
 async function loadDashboard() {
-  let response = await fetch("/api/dashboard").catch(() => null);
-  if (!response?.ok) {
-    response = await fetch("./data/grants.json");
-  }
-  if (!response?.ok) {
+  const [dashboard, profile] = await Promise.all([fetchDashboardData(), fetchProfileData()]);
+  if (!dashboard) {
     throw new Error("Dashboard data could not be loaded");
   }
-  state.dashboard = await response.json();
+  state.dashboard = dashboard;
+  state.profile = profile;
   state.opportunities = state.dashboard.opportunities ?? [];
   renderDashboard();
+}
+
+async function fetchDashboardData() {
+  let response = await fetch("/api/dashboard").catch(() => null);
+  if (!response?.ok) {
+    response = await fetch("./data/grants.json").catch(() => null);
+  }
+  return response?.ok ? response.json() : null;
+}
+
+async function fetchProfileData() {
+  const response = await fetch("./data/emmanuel-profile.json").catch(() => null);
+  return response?.ok ? response.json() : {};
 }
 
 function renderDashboard() {
@@ -322,6 +341,7 @@ function renderPipelineChart() {
 }
 
 function openDrawer(opportunity) {
+  const application = buildApplicationPackage(opportunity, state.profile ?? {});
   elements.drawerContent.className = "drawer-content";
   elements.drawerContent.innerHTML = `
     <h3>${escapeHtml(opportunity.title)}</h3>
@@ -335,13 +355,47 @@ function openDrawer(opportunity) {
       <div><dt>Fit score</dt><dd>${escapeHtml(String(opportunity.fitScore ?? 0))}</dd></div>
       <div><dt>Next action</dt><dd>${escapeHtml(opportunity.nextAction ?? "Review opportunity.")}</dd></div>
     </dl>
+    <section class="application-panel" aria-label="Application draft">
+      <div>
+        <span class="row-label">Application package</span>
+        <strong>${escapeHtml(application.packageName)}</strong>
+        <p>${escapeHtml(application.confidence)}% autofill confidence from public dashboard data</p>
+      </div>
+      <button class="icon-button application-download" type="button" data-download-application="${escapeAttribute(opportunity.id)}">
+        ${downloadIcon()}
+        Download AI draft
+      </button>
+    </section>
     ${
       opportunity.url
-        ? `<a class="icon-button" href="${escapeAttribute(opportunity.url)}" target="_blank" rel="noreferrer">Open source</a>`
+        ? `<a class="icon-button source-link" href="${escapeAttribute(opportunity.url)}" target="_blank" rel="noreferrer">Open source</a>`
         : ""
     }
   `;
   elements.detailDrawer.classList.add("open");
+}
+
+function handleDrawerAction(event) {
+  const button = event.target.closest("[data-download-application]");
+  if (!button) return;
+
+  const opportunity = state.opportunities.find((item) => item.id === button.dataset.downloadApplication);
+  if (!opportunity) return;
+
+  const markdown = generateApplicationMarkdown(opportunity, state.profile ?? {});
+  downloadText(applicationFileName(opportunity), markdown, "text/markdown");
+}
+
+function downloadText(filename, content, type) {
+  const blob = new Blob([content], { type });
+  const url = URL.createObjectURL(blob);
+  const anchor = document.createElement("a");
+  anchor.href = url;
+  anchor.download = filename;
+  document.body.append(anchor);
+  anchor.click();
+  anchor.remove();
+  window.setTimeout(() => URL.revokeObjectURL(url), 0);
 }
 
 function closeDrawer() {
@@ -357,6 +411,16 @@ function refreshButtonContent() {
       <path d="M20 20v-4h-4" />
     </svg>
     Refresh
+  `;
+}
+
+function downloadIcon() {
+  return `
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 3v12" />
+      <path d="m7 10 5 5 5-5" />
+      <path d="M5 21h14" />
+    </svg>
   `;
 }
 
