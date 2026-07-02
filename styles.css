@@ -572,6 +572,34 @@ canvas {
   line-height: 1.5;
 }
 
+.application-panel {
+  display: grid;
+  gap: 14px;
+  margin: 18px 0;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-strong);
+}
+
+.application-panel strong {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.96rem;
+  line-height: 1.35;
+}
+
+.application-panel p {
+  margin: 6px 0 0;
+  font-size: 0.86rem;
+}
+
+.application-download,
+.source-link {
+  width: 100%;
+  justify-content: center;
+}
+
 .detail-list {
   display: grid;
   gap: 10px;
