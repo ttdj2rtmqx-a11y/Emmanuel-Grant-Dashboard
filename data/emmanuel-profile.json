@@ -1,0 +1,53 @@
+{
+  "displayName": "Emmanuel",
+  "organizationName": "Emmanuel Grant Agent",
+  "legalApplicantName": "",
+  "mission": "Find, score, and move aligned grant opportunities from discovery to submission.",
+  "publicSummary": "Emmanuel Grant Agent is a public grant-tracking dashboard focused on identifying high-fit community funding opportunities, monitoring deadlines, and turning qualified opportunities into application-ready work.",
+  "serviceArea": "",
+  "registrationStatus": "",
+  "authorizedRepresentative": "",
+  "operatingBudget": "",
+  "localNeedData": "",
+  "primaryContact": {
+    "name": "Emmanuel",
+    "email": "",
+    "phone": ""
+  },
+  "focusAreas": [
+    "community energy",
+    "youth wellness",
+    "arts access",
+    "workforce pathways",
+    "food access",
+    "neighborhood resilience"
+  ],
+  "strengths": [
+    "Daily opportunity tracking and deadline monitoring",
+    "Grant fit scoring across agency, program, deadline, and funding amount",
+    "Application pipeline management from discovery through review",
+    "Community-oriented funding focus across public agencies"
+  ],
+  "standardAttachments": [
+    "Eligibility confirmation",
+    "Applicant registration records",
+    "Project narrative",
+    "Budget narrative",
+    "Partner letters",
+    "Submission checklist"
+  ],
+  "publicSources": [
+    {
+      "label": "Public dashboard",
+      "url": "https://ttdj2rtmqx-a11y.github.io/Emmanuel-Grant-Dashboard/"
+    },
+    {
+      "label": "Public source repository",
+      "url": "https://github.com/ttdj2rtmqx-a11y/Emmanuel-Grant-Dashboard"
+    },
+    {
+      "label": "Federal grants portal",
+      "url": "https://www.grants.gov/"
+    }
+  ]
+}
