@@ -2,6 +2,8 @@
 
 A local dashboard for the Emmanuel Grant Agent. It tracks grant opportunities, daily priorities, deadlines, application value, and next actions.
 
+The dashboard can also download an application draft for each grant. The draft is matched to the grant agency/program, autocompleted from `data/emmanuel-profile.json`, and marks unknown public details with `[VERIFY ...]` so they can be reviewed before submission.
+
 ## Run
 
 ```bash
@@ -45,3 +47,13 @@ The importer accepts an array or an object with `opportunities`, `grants`, `item
 ```bash
 npm run check
 ```
+
+## Application Drafts
+
+Open any grant in the dashboard and choose **Download AI draft**. The public GitHub Pages dashboard generates the file in the browser. The local server also exposes:
+
+```bash
+/api/applications/:opportunityId/download
+```
+
+Update `data/emmanuel-profile.json` with verified public information about Emmanuel to improve autocomplete coverage.
