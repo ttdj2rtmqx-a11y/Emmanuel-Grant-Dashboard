@@ -2,6 +2,7 @@ import { createServer } from "node:http";
 import { readFile } from "node:fs/promises";
 import { extname, join, normalize } from "node:path";
 import { fileURLToPath } from "node:url";
+import { applicationFileName, generateApplicationMarkdown } from "./application-generator.js";
 import { buildDashboardSnapshot, readDashboardData, refreshDashboardData } from "./lib/update-dashboard.mjs";
 
 const root = fileURLToPath(new URL(".", import.meta.url));
@@ -29,6 +30,22 @@ const server = createServer(async (request, response) => {
     if (url.pathname === "/api/dashboard" && request.method === "GET") {
       const dashboard = await getFreshDashboard();
       return sendJson(response, dashboard);
+    }
+
+    const applicationDownloadMatch = url.pathname.match(/^\/api\/applications\/([^/]+)\/download$/);
+    if (applicationDownloadMatch && request.method === "GET") {
+      const dashboard = await getFreshDashboard();
+      const profile = await readProfileData();
+      const opportunity = dashboard.opportunities?.find((item) => item.id === applicationDownloadMatch[1]);
+      if (!opportunity) {
+        return sendJson(response, { ok: false, error: "Opportunity not found" }, 404);
+      }
+
+      return sendTextAttachment(
+        response,
+        generateApplicationMarkdown(opportunity, profile),
+        applicationFileName(opportunity)
+      );
     }
 
     if (url.pathname === "/api/refresh" && request.method === "POST") {
@@ -73,6 +90,15 @@ async function getFreshDashboard() {
   return snapshot;
 }
 
+async function readProfileData() {
+  try {
+    const raw = await readFile(join(root, "data", "emmanuel-profile.json"), "utf8");
+    return JSON.parse(raw);
+  } catch {
+    return {};
+  }
+}
+
 async function serveStatic(pathname, response) {
   const requestPath = pathname === "/" ? "/index.html" : decodeURIComponent(pathname);
   const safePath = normalize(requestPath).replace(/^(\.\.[/\\])+/, "");
@@ -103,4 +129,13 @@ function sendJson(response, body, status = 200) {
     "Cache-Control": "no-store"
   });
   response.end(JSON.stringify(body, null, 2));
+}
+
+function sendTextAttachment(response, body, filename, status = 200) {
+  response.writeHead(status, {
+    "Content-Type": "text/markdown; charset=utf-8",
+    "Content-Disposition": `attachment; filename="${filename}"`,
+    "Cache-Control": "no-store"
+  });
+  response.end(body);
 }
