@@ -3,9 +3,9 @@
     "dashboardName": "Emmanuel Grant Agent",
     "owner": "Emmanuel",
     "mission": "Find, score, and move aligned grant opportunities from discovery to submission.",
-    "lastUpdated": "2026-08-28",
-    "lastRunAt": "2026-08-28T22:45:37.168Z",
-    "nextUpdate": "2026-08-29",
+    "lastUpdated": "2026-08-29",
+    "lastRunAt": "2026-08-29T16:54:04.109Z",
+    "nextUpdate": "2026-08-30",
     "sourceMode": "local",
     "sourceName": "Starter opportunity portfolio",
     "sourceStatus": "ready"
@@ -39,8 +39,8 @@
       ],
       "summary": "Supports local clean-energy planning, partner coordination, and implementation readiness.",
       "status": "closed",
-      "daysUntilDeadline": -44,
-      "daysSinceTouch": 67,
+      "daysUntilDeadline": -45,
+      "daysSinceTouch": 68,
       "touchStatus": "needs-touch"
     },
     {
@@ -64,8 +64,8 @@
       ],
       "summary": "Funds community outreach and prevention programming for youth wellness and family support.",
       "status": "closed",
-      "daysUntilDeadline": -30,
-      "daysSinceTouch": 65,
+      "daysUntilDeadline": -31,
+      "daysSinceTouch": 66,
       "touchStatus": "needs-touch"
     },
     {
@@ -89,8 +89,8 @@
       ],
       "summary": "Backs accessible arts programming, neighborhood events, and audience-development work.",
       "status": "closed",
-      "daysUntilDeadline": -20,
-      "daysSinceTouch": 71,
+      "daysUntilDeadline": -21,
+      "daysSinceTouch": 72,
       "touchStatus": "needs-touch"
     },
     {
@@ -114,8 +114,8 @@
       ],
       "summary": "Planning dollars for training pathways, partner coordination, and employer-aligned credentials.",
       "status": "closed",
-      "daysUntilDeadline": -7,
-      "daysSinceTouch": 73,
+      "daysUntilDeadline": -8,
+      "daysSinceTouch": 74,
       "touchStatus": "needs-touch"
     },
     {
@@ -139,8 +139,8 @@
       ],
       "summary": "Supports community-led food access pilots, outreach, and local supply partnerships.",
       "status": "due-soon",
-      "daysUntilDeadline": 6,
-      "daysSinceTouch": 69,
+      "daysUntilDeadline": 5,
+      "daysSinceTouch": 70,
       "touchStatus": "needs-touch"
     },
     {
@@ -164,8 +164,8 @@
       ],
       "summary": "Small implementation grants for preparedness, climate resilience, and neighborhood response capacity.",
       "status": "closed",
-      "daysUntilDeadline": -52,
-      "daysSinceTouch": 64,
+      "daysUntilDeadline": -53,
+      "daysSinceTouch": 65,
       "touchStatus": "needs-touch"
     }
   ],
@@ -204,7 +204,7 @@
       "dueDate": "2026-06-28",
       "status": "Overdue",
       "priority": "High",
-      "daysUntilDue": -61
+      "daysUntilDue": -62
     },
     {
       "id": "task-partner-quotes",
@@ -214,7 +214,7 @@
       "dueDate": "2026-07-02",
       "status": "Overdue",
       "priority": "High",
-      "daysUntilDue": -57
+      "daysUntilDue": -58
     },
     {
       "id": "task-resilience-timeline",
@@ -224,7 +224,7 @@
       "dueDate": "2026-06-27",
       "status": "Overdue",
       "priority": "High",
-      "daysUntilDue": -62
+      "daysUntilDue": -63
     },
     {
       "id": "task-budget-narrative",
@@ -234,7 +234,7 @@
       "dueDate": "2026-07-05",
       "status": "Overdue",
       "priority": "Medium",
-      "daysUntilDue": -54
+      "daysUntilDue": -55
     },
     {
       "id": "task-employer-map",
@@ -244,7 +244,7 @@
       "dueDate": "2026-07-10",
       "status": "Overdue",
       "priority": "Medium",
-      "daysUntilDue": -49
+      "daysUntilDue": -50
     }
   ],
   "metrics": {
@@ -260,7 +260,7 @@
       "id": "usda-food-access-2026",
       "title": "Food Access Innovation Grant",
       "date": "2026-09-03",
-      "daysUntilDeadline": 6
+      "daysUntilDeadline": 5
     }
   },
   "pipeline": [
@@ -304,7 +304,7 @@
     {
       "type": "deadline",
       "severity": "critical",
-      "title": "Food Access Innovation Grant closes in 6 days",
+      "title": "Food Access Innovation Grant closes in 5 days",
       "detail": "Validate match requirements and distribution partner capacity.",
       "opportunityId": "usda-food-access-2026"
     },
@@ -312,14 +312,14 @@
       "type": "task",
       "severity": "critical",
       "title": "Finalize resilience grant timeline",
-      "detail": "62 days overdue",
+      "detail": "63 days overdue",
       "opportunityId": "epa-resilience-mini-grant-2026"
     },
     {
       "type": "cadence",
       "severity": "attention",
       "title": "Food Access Innovation Grant needs a follow-up touch",
-      "detail": "Last touched 69 days ago",
+      "detail": "Last touched 70 days ago",
       "opportunityId": "usda-food-access-2026"
     }
   ],
@@ -328,7 +328,7 @@
       "id": "epa-resilience-mini-grant-2026",
       "title": "Neighborhood Resilience Mini-Grant",
       "deadline": "2026-07-07",
-      "daysUntilDeadline": -52,
+      "daysUntilDeadline": -53,
       "priority": "High",
       "fitScore": 88
     },
@@ -336,7 +336,7 @@
       "id": "doe-community-clean-energy-2026",
       "title": "Community Clean Energy Capacity Grant",
       "deadline": "2026-07-15",
-      "daysUntilDeadline": -44,
+      "daysUntilDeadline": -45,
       "priority": "High",
       "fitScore": 91
     },
@@ -344,7 +344,7 @@
       "id": "hhs-youth-wellness-2026",
       "title": "Youth Wellness Outreach Initiative",
       "deadline": "2026-07-29",
-      "daysUntilDeadline": -30,
+      "daysUntilDeadline": -31,
       "priority": "High",
       "fitScore": 87
     },
@@ -352,7 +352,7 @@
       "id": "nea-arts-access-2026",
       "title": "Neighborhood Arts Access Fund",
       "deadline": "2026-08-08",
-      "daysUntilDeadline": -20,
+      "daysUntilDeadline": -21,
       "priority": "Medium",
       "fitScore": 79
     },
@@ -360,7 +360,7 @@
       "id": "ed-workforce-pathways-2026",
       "title": "Workforce Pathways Planning Grant",
       "deadline": "2026-08-21",
-      "daysUntilDeadline": -7,
+      "daysUntilDeadline": -8,
       "priority": "High",
       "fitScore": 84
     },
@@ -368,7 +368,7 @@
       "id": "usda-food-access-2026",
       "title": "Food Access Innovation Grant",
       "deadline": "2026-09-03",
-      "daysUntilDeadline": 6,
+      "daysUntilDeadline": 5,
       "priority": "Medium",
       "fitScore": 76
     }
