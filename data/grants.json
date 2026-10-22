@@ -3,9 +3,9 @@
     "dashboardName": "Emmanuel Grant Agent",
     "owner": "Emmanuel",
     "mission": "Find, score, and move aligned grant opportunities from discovery to submission.",
-    "lastUpdated": "2026-10-21",
-    "lastRunAt": "2026-10-21T17:43:10.767Z",
-    "nextUpdate": "2026-10-22",
+    "lastUpdated": "2026-10-22",
+    "lastRunAt": "2026-10-22T17:42:25.587Z",
+    "nextUpdate": "2026-10-23",
     "sourceMode": "local",
     "sourceName": "Starter opportunity portfolio",
     "sourceStatus": "ready"
@@ -39,8 +39,8 @@
       ],
       "summary": "Supports local clean-energy planning, partner coordination, and implementation readiness.",
       "status": "closed",
-      "daysUntilDeadline": -98,
-      "daysSinceTouch": 121,
+      "daysUntilDeadline": -99,
+      "daysSinceTouch": 122,
       "touchStatus": "needs-touch"
     },
     {
@@ -64,8 +64,8 @@
       ],
       "summary": "Funds community outreach and prevention programming for youth wellness and family support.",
       "status": "closed",
-      "daysUntilDeadline": -84,
-      "daysSinceTouch": 119,
+      "daysUntilDeadline": -85,
+      "daysSinceTouch": 120,
       "touchStatus": "needs-touch"
     },
     {
@@ -89,8 +89,8 @@
       ],
       "summary": "Backs accessible arts programming, neighborhood events, and audience-development work.",
       "status": "closed",
-      "daysUntilDeadline": -74,
-      "daysSinceTouch": 125,
+      "daysUntilDeadline": -75,
+      "daysSinceTouch": 126,
       "touchStatus": "needs-touch"
     },
     {
@@ -114,8 +114,8 @@
       ],
       "summary": "Planning dollars for training pathways, partner coordination, and employer-aligned credentials.",
       "status": "closed",
-      "daysUntilDeadline": -61,
-      "daysSinceTouch": 127,
+      "daysUntilDeadline": -62,
+      "daysSinceTouch": 128,
       "touchStatus": "needs-touch"
     },
     {
@@ -139,8 +139,8 @@
       ],
       "summary": "Supports community-led food access pilots, outreach, and local supply partnerships.",
       "status": "closed",
-      "daysUntilDeadline": -48,
-      "daysSinceTouch": 123,
+      "daysUntilDeadline": -49,
+      "daysSinceTouch": 124,
       "touchStatus": "needs-touch"
     },
     {
@@ -164,8 +164,8 @@
       ],
       "summary": "Small implementation grants for preparedness, climate resilience, and neighborhood response capacity.",
       "status": "closed",
-      "daysUntilDeadline": -106,
-      "daysSinceTouch": 118,
+      "daysUntilDeadline": -107,
+      "daysSinceTouch": 119,
       "touchStatus": "needs-touch"
     }
   ],
@@ -204,7 +204,7 @@
       "dueDate": "2026-06-28",
       "status": "Overdue",
       "priority": "High",
-      "daysUntilDue": -115
+      "daysUntilDue": -116
     },
     {
       "id": "task-partner-quotes",
@@ -214,7 +214,7 @@
       "dueDate": "2026-07-02",
       "status": "Overdue",
       "priority": "High",
-      "daysUntilDue": -111
+      "daysUntilDue": -112
     },
     {
       "id": "task-resilience-timeline",
@@ -224,7 +224,7 @@
       "dueDate": "2026-06-27",
       "status": "Overdue",
       "priority": "High",
-      "daysUntilDue": -116
+      "daysUntilDue": -117
     },
     {
       "id": "task-budget-narrative",
@@ -234,7 +234,7 @@
       "dueDate": "2026-07-05",
       "status": "Overdue",
       "priority": "Medium",
-      "daysUntilDue": -108
+      "daysUntilDue": -109
     },
     {
       "id": "task-employer-map",
@@ -244,7 +244,7 @@
       "dueDate": "2026-07-10",
       "status": "Overdue",
       "priority": "Medium",
-      "daysUntilDue": -103
+      "daysUntilDue": -104
     }
   ],
   "metrics": {
@@ -300,7 +300,7 @@
       "type": "task",
       "severity": "critical",
       "title": "Finalize resilience grant timeline",
-      "detail": "116 days overdue",
+      "detail": "117 days overdue",
       "opportunityId": "epa-resilience-mini-grant-2026"
     }
   ],
@@ -309,7 +309,7 @@
       "id": "epa-resilience-mini-grant-2026",
       "title": "Neighborhood Resilience Mini-Grant",
       "deadline": "2026-07-07",
-      "daysUntilDeadline": -106,
+      "daysUntilDeadline": -107,
       "priority": "High",
       "fitScore": 88
     },
@@ -317,7 +317,7 @@
       "id": "doe-community-clean-energy-2026",
       "title": "Community Clean Energy Capacity Grant",
       "deadline": "2026-07-15",
-      "daysUntilDeadline": -98,
+      "daysUntilDeadline": -99,
       "priority": "High",
       "fitScore": 91
     },
@@ -325,7 +325,7 @@
       "id": "hhs-youth-wellness-2026",
       "title": "Youth Wellness Outreach Initiative",
       "deadline": "2026-07-29",
-      "daysUntilDeadline": -84,
+      "daysUntilDeadline": -85,
       "priority": "High",
       "fitScore": 87
     },
@@ -333,7 +333,7 @@
       "id": "nea-arts-access-2026",
       "title": "Neighborhood Arts Access Fund",
       "deadline": "2026-08-08",
-      "daysUntilDeadline": -74,
+      "daysUntilDeadline": -75,
       "priority": "Medium",
       "fitScore": 79
     },
@@ -341,7 +341,7 @@
       "id": "ed-workforce-pathways-2026",
       "title": "Workforce Pathways Planning Grant",
       "deadline": "2026-08-21",
-      "daysUntilDeadline": -61,
+      "daysUntilDeadline": -62,
       "priority": "High",
       "fitScore": 84
     },
@@ -349,7 +349,7 @@
       "id": "usda-food-access-2026",
       "title": "Food Access Innovation Grant",
       "deadline": "2026-09-03",
-      "daysUntilDeadline": -48,
+      "daysUntilDeadline": -49,
       "priority": "Medium",
       "fitScore": 76
     }
